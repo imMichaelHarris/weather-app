@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import {getWeather} from '../actions'
 
 import WeatherAlert from "./WeatherAlert";
 
@@ -13,4 +14,4 @@ class WeatherViewContainer {
   }
 }
 
-export default WeatherViewContainer;
+export default connect(null, {getWeather})(WeatherViewContainer);
