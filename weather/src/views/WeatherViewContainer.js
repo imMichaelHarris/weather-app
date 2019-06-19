@@ -4,13 +4,13 @@ import { getWeather } from "../actions";
 
 import WeatherAlert from "./WeatherAlert";
 
-class WeatherViewContainer {
+class WeatherViewContainer extends React.Component{
   componentDidMount() {
     //soon TM
-    getWeather()
+    this.props.getWeather()
   }
   render() {
-    return <div>{/* <WeatherAlert /> */}</div>;
+    return (<div>{/* <WeatherAlert /> */}<h2>Test</h2></div>);
   }
 }
 
