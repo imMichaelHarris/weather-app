@@ -12,6 +12,6 @@ export const getWeather = () => dispatch => {
       dispatch({ type: FETCH_WEATHER_SUCCESS, payload: res.data.features });
     })
     .catch(err => {
-      dispatch({type: FETCH_WEATHER_FAILED})
+      dispatch({type: FETCH_WEATHER_FAILED, payload: err})
     });
 };

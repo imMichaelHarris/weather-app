@@ -26,6 +26,12 @@ export default (state = initialState, action) => {
               errors: null,
               alerts: action.payload
           }
+          case FETCH_WEATHER_FAILED:
+              return {
+                  ...state,
+                  fetching: false,
+                  errors: action.payload
+              }
     default:
       return state;
   }
