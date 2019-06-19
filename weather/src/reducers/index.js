@@ -5,7 +5,7 @@ import {
 } from "../actions";
 
 const initialState = {
-  alerts: [],
+  weatherAlerts: [],
   fetching: false,
   errors: null
 };
@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
               ...state,
               fetching: false,
               errors: null,
-              alerts: action.payload
+              weatherAlerts: action.payload
           }
           case FETCH_WEATHER_FAILED:
               return {

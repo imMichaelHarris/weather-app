@@ -14,7 +14,13 @@ class WeatherViewContainer extends React.Component{
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    weatherAlerts: state.weatherAlerts,
+    fetching: state.fetching
+  }
+}
 export default connect(
-  null,
+  mapStateToProps,
   { getWeather }
 )(WeatherViewContainer);
