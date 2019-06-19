@@ -1,4 +1,8 @@
-import {FETCH_WEATHER_START, FETCH_WEATHER_SUCCESS, FETCH_WEATHER_FAILED} from "../actions"
+import {
+  FETCH_WEATHER_START,
+  FETCH_WEATHER_SUCCESS,
+  FETCH_WEATHER_FAILED
+} from "../actions";
 
 const initialState = {
   alerts: [],
@@ -8,7 +12,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    
+    case FETCH_WEATHER_START:
+      return {
+        ...state,
+        fetching: true
+      };
     default:
       return state;
   }
