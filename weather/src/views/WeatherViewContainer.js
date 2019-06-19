@@ -4,13 +4,20 @@ import { getWeather } from "../actions";
 
 import WeatherAlert from "./WeatherAlert";
 
-class WeatherViewContainer extends React.Component{
+class WeatherViewContainer extends React.Component {
   componentDidMount() {
     //soon TM
-    this.props.getWeather()
+    this.props.getWeather();
   }
   render() {
-    return (<div>{/* <WeatherAlert /> */}<h2>Test</h2></div>);
+    return (
+      <div>
+        <h2>Test</h2>
+        {this.props.weatherAlerts.map(alert => {
+          return <WeatherAlert alert={alert} key={alert.id}/>
+        })}
+      </div>
+    );
   }
 }
 
@@ -18,8 +25,8 @@ const mapStateToProps = state => {
   return {
     weatherAlerts: state.weatherAlerts,
     fetching: state.fetching
-  }
-}
+  };
+};
 export default connect(
   mapStateToProps,
   { getWeather }
