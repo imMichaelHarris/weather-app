@@ -1,14 +1,16 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import WeatherAlert from './WeatherAlert'
+import WeatherAlert from "./WeatherAlert";
 
-const WeatherViewContainer = () => {
-    return (
-        <div>
-            {/* <WeatherAlert /> */}
-        </div>
-    );
-};
+class WeatherViewContainer {
+
+    componentDidMount(){
+        //soon TM
+    }
+  render() {
+    return <div>{/* <WeatherAlert /> */}</div>;
+  }
+}
 
 export default WeatherViewContainer;
