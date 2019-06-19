@@ -7,7 +7,7 @@ import {
 const initialState = {
   alerts: [],
   fetching: false,
-  errors: ""
+  errors: null
 };
 
 export default (state = initialState, action) => {
@@ -15,7 +15,8 @@ export default (state = initialState, action) => {
     case FETCH_WEATHER_START:
       return {
         ...state,
-        fetching: true
+        fetching: true,
+        errors: null
       };
     default:
       return state;
