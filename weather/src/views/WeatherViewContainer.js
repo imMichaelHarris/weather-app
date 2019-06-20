@@ -12,7 +12,7 @@ class WeatherViewContainer extends React.Component {
   render() {
     return (
       <div>
-        <h2>Test</h2>
+        <h2>Weather App</h2>
         {this.props.weatherAlerts.map(alert => {
           return <WeatherAlert alert={alert} key={alert.id}/>
         })}

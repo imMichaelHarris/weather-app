@@ -19,7 +19,6 @@ export default (state = initialState, action) => {
         errors: null
       };
       case FETCH_WEATHER_SUCCESS:
-          console.log(action.payload)
           return {
               ...state,
               fetching: false,
